@@ -1,23 +1,20 @@
- <md-content>
- <div class="row">
+<div layout="row" flex>
     <button ng-click="global.logOut()">Logout</button>
 </div>
-<div layout="row" layout-wrap layout-margin>    
-        
-        <md-card  flex="25" flex-sm="100" ng-repeat="movie in movies">
-            <img ng-click="showImdb(movie)" ng-src="{{movie.image}}" class="md-card-image" alt="Washed Out" >
-            <md-card-title>
-                <md-card-title-text>
-                    <span class="md-headline"></span>
-                </md-card-title-text>
-            </md-card-title>
-            <md-card-content>
-                {{movie.title}}
-            </md-card-content>
-            <md-card-actions layout="row" layout-align="end center">
-                <md-button ng-click="voteMovie(movie.title)">Vote For This Movie</md-button>
-            </md-card-actions>
-        </md-card>
-        
-    </div>
-</md-content>
+<div layout="row" flex layout-wrap layout-align="center">
+    <md-card flex="18" flex-sm="80" flex-xs="100" ng-repeat="movie in movies">
+        <img ng-click="showImdb(movie)" ng-src="{{movie.image}}" class="md-card-image" alt="Washed Out">
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline"></span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+            {{movie.title}}
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="end center">
+            <md-button ng-click="voteMovie(movie.title)">Vote For This Movie</md-button>
+        </md-card-actions>
+    </md-card>
+
+</div>
