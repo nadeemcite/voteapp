@@ -1,0 +1,23 @@
+<div class="row">
+    <button ng-click="global.logOut()">Logout</button>
+</div>
+<div class="row">
+    <div class="col-md-3 nopadding" ng-repeat="movie in movies">
+        
+        <md-card  >
+            <img ng-click="showImdb(movie)" ng-src="{{movie.image}}" class="md-card-image" alt="Washed Out" style="height:350px; width:100%;">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline"></span>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+                {{movie.title}}
+            </md-card-content>
+            <md-card-actions layout="row" layout-align="end center">
+                <md-button ng-click="voteMovie(movie.title)">Vote For This Movie</md-button>
+            </md-card-actions>
+        </md-card>
+        
+    </div>
+</div>
