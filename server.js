@@ -57,4 +57,10 @@ io.sockets.on('connection', function(socket) {
     });
     io.sockets.emit('logged', loggedUsers);
 })
-server.listen(8080)
+server.listen(80,function(err){
+    if(err){
+        console.log(err);
+    }else{
+        console.log('Server started');
+    }
+})
