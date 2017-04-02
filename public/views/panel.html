@@ -1,11 +1,11 @@
-<div class="row">
+ <md-content>
+ <div class="row">
     <button ng-click="global.logOut()">Logout</button>
 </div>
-<div class="row">
-    <div class="col-md-3 nopadding" ng-repeat="movie in movies">
+<div layout="row" layout-wrap layout-margin>    
         
-        <md-card  >
-            <img ng-click="showImdb(movie)" ng-src="{{movie.image}}" class="md-card-image" alt="Washed Out" style="height:350px; width:100%;">
+        <md-card  flex="25" flex-sm="100" ng-repeat="movie in movies">
+            <img ng-click="showImdb(movie)" ng-src="{{movie.image}}" class="md-card-image" alt="Washed Out" >
             <md-card-title>
                 <md-card-title-text>
                     <span class="md-headline"></span>
@@ -20,4 +20,4 @@
         </md-card>
         
     </div>
-</div>
+</md-content>

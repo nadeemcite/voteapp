@@ -10,17 +10,13 @@
         body {
             overflow-y: hidden !important;
         }
-        
-        .container-fluid {
-            overflow-y: scroll !important;
-        }
     </style>
 </head>
 </head>
 
 <body layout="column" ng-app="myapp">
 <a href="/results">Results</a>
-    <div ng-view class="container-fluid"></div>
+    <div ng-view class="container" flex></div>
    
     <script src="//apis.google.com/js/platform.js" async defer></script>
     <script src="socket.io/socket.io.js"></script>
