@@ -47,7 +47,7 @@ app.controller('VotingPanelController', function($scope, $http, $rootScope, $q, 
     function getmovieData(name) {
         return $q(function(resolve, reject) {
             $http({
-                url: 'http://www.omdbapi.com/',
+                url: 'https://www.omdbapi.com/',
                 params: {
                     s: name
                 },
