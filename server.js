@@ -4,7 +4,7 @@ var server = require('http').Server(app);
 var io = require('socket.io')(server);
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://testuser:Abcd#12345@ds147920.mlab.com:47920/voteapp');
-
+var PORT = process.env.PORT || 9000;;
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({
     extended: true
@@ -57,10 +57,4 @@ io.sockets.on('connection', function(socket) {
     });
     io.sockets.emit('logged', loggedUsers);
 })
-server.listen(80,function(err){
-    if(err){
-        console.log(err);
-    }else{
-        console.log('Server started');
-    }
-})
+server.listen(PORT);
