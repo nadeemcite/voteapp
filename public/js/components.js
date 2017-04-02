@@ -13,20 +13,14 @@ app.service('Modal', function($mdDialog, $mdToast,$timeout,$rootScope) {
             );
         },
         toast: function(text) {
-            /*
+            
             $mdToast.show(
                 $mdToast.simple()
                 .textContent(text)
                 .position('bottom right')
                 .hideDelay(3000)
             );
-            */
-            $rootScope.toastMessage=text;
-           //$("#toastMessage").show();
-            $("#toastMessage").slideDown(200);
-            $timeout(function(){
-                $("#toastMessage").slideUp(200);
-            },3000)
+            
         },
         imdb: function(movie) {
             $mdDialog.show({

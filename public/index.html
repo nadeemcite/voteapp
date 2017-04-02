@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="myapp">
+<html >
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,13 +23,10 @@
 </head>
 </head>
 
-<body layout="column">
+<body layout="column" ng-app="myapp">
 <a href="/results">Results</a>
     <div ng-view class="container-fluid"></div>
-    
-    <div id="toastMessage" class="alert alert-success" style="position:fixed; top:15px; right:15px; display:none;">
-        {{toastMessage}}
-    </div>
+   
     
     <script src="socket.io/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
