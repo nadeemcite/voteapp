@@ -8,7 +8,7 @@ app.service('Modal', function($mdDialog, $mdToast,$timeout,$rootScope) {
                 .title(title)
                 .textContent(msg)
                 .ariaLabel('Alert Dialog Demo')
-                .ok('Start Voting')
+                .ok('Ok')
                 .targetEvent(event)
             );
         },

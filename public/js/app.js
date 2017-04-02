@@ -1,4 +1,4 @@
-var app = angular.module('myapp', ['ngRoute', 'ngMaterial', 'fb']);
+var app = angular.module('myapp', ['ngRoute', 'ngMaterial', 'fb','gp']);
 
 app.config(function($routeProvider, $locationProvider) {
     $routeProvider.when('/', {
